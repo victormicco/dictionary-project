@@ -12,7 +12,8 @@ export function Dictionary() {
 	const [fetchNotFound, setFetchNotFound] = useState(false);
 	const { theme } = useTheme();
 
-	const searchWord = async () => {
+	const searchWord = async (e: React.FormEvent) => {
+		e.preventDefault();
 		try {
 			await fetch(
 				"https://api.dictionaryapi.dev/api/v2/entries/en/" + word
@@ -39,7 +40,10 @@ export function Dictionary() {
 
 	return (
 		<div className=" w-full flex flex-col">
-			<div className="container justify-start pl-32 flex w-full">
+			<form
+				className="container justify-start xl:pl-64 flex xl:w-4/6 sm:w-7/12 sm:justify-center"
+				onSubmit={searchWord}
+			>
 				<input
 					type="text"
 					value={word}
@@ -47,20 +51,11 @@ export function Dictionary() {
 					placeholder="Search a thing..."
 					className=" w-11/12 text-start pl-10 align-baseline text-black bg-gray-200 border-none outline-none rounded-lg  py-4 shadow-sm sm:text-base"
 				/>
-				<button
-					type="submit"
-					className="-mx-16 text-purple-700 text-xl"
-					onClick={searchWord}
-					onKeyDown={(e) => {
-						if (e.key == "Enter") {
-							searchWord();
-						}
-					}}
-				>
+				<button type="submit" className="-mx-16 text-purple-700 text-xl">
 					<AiOutlineSearch />
 				</button>
-			</div>
-			<div className="my-3 w-10/12 flex  flex-col pl-36	">
+			</form>
+			<div className="my-3 w-10/12 flex  flex-col pl-36 sm:w-8/12">
 				<div className="flex flex-row items-center text-lg font-bold font-serif">
 					<p className=" text-6xl font-serif">{word}</p>
 				</div>
