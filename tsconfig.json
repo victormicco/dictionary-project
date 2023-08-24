@@ -22,6 +22,18 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/page.jsx", "src/app/layout.jsx", "src/hooks/ThemeContext.jsx", "src/components/toggle.jsx", "src/components/Navbar.jsx", "src/components/FetchArea.jsx", "src/components/Content.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/page.tsx",
+    "src/app/layout.jsx",
+    "src/hooks/ThemeContext.tsx",
+    "src/components/Toggle/Toggle.tsx",
+    "src/components/Navbar/Navbar.tsx",
+    "src/components/FetchArea.tsx",
+    "src/components/Content.jsx"
+  ],
   "exclude": ["node_modules"]
 }
