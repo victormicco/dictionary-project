@@ -6,22 +6,25 @@ import Toggle from "../Toggle/Toggle";
 
 export default function Navbar() {
 	return (
-		<nav className=" align-bottom flex justify-between pb-2">
-			<a className=" text-gray-500 text-5xl pl-14 flex pt-6 mt-2 pb-2">
-				<FiBook />
-			</a>
+		<nav className="">
+			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 sm:text-base sm:max-w-sm">
+				<a className="flex items-center text-5xl">
+					<FiBook />
+				</a>
 
-			<ul className="flex pr-14 pb-6 justify-end align-bottom pt-5 items-center">
-				<li className="mr-6 pt-2">
-					<Toggle />
-				</li>
-
-				<li className="mr-6 pr-12">
-					<a className="text-gray-500 text-5xl  ">
-						<MdOutlineDarkMode />
-					</a>
-				</li>
-			</ul>
+				<ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0    ">
+					<li>
+						<a className="block py-2 pl-3 pr-4 mt-2  rounded  md:hover:bg-transparent md:border-0  md:p-0     md:dark:hover:bg-transparent">
+							<Toggle />
+						</a>
+					</li>
+					<li>
+						<a className="block py-2 pl-3 pr-4  rounded  md:hover:bg-transparent md:border-0  md:p-0     md:dark:hover:bg-transparent text-5xl">
+							<MdOutlineDarkMode />
+						</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
 	);
 }

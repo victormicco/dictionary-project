@@ -39,13 +39,13 @@ export function Dictionary() {
 
 	return (
 		<div className=" w-full flex flex-col">
-			<div className="container justify-center flex">
+			<div className="container justify-center flex w-full">
 				<input
 					type="text"
 					value={word}
 					onChange={(e) => setWord(e.target.value.replace(/[^a-zA-Z\s]/g, ""))}
 					placeholder="Search a thing..."
-					className=" w-10/12 text-start pl-5 text-black bg-gray-200 border-none outline-none rounded-lg  py-4 shadow-sm"
+					className=" w-10/12 text-start pl-10 text-black bg-gray-200 border-none outline-none rounded-lg  py-4 shadow-sm sm:text-base sm:max-w-sm"
 				/>
 				<button
 					type="submit"
