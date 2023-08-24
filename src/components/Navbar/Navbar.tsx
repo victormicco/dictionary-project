@@ -7,7 +7,7 @@ import Toggle from "../Toggle/Toggle";
 export default function Navbar() {
 	return (
 		<nav className="">
-			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 sm:text-base sm:max-w-sm">
+			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 sm:text-base ">
 				<a className="flex items-center text-5xl">
 					<FiBook />
 				</a>

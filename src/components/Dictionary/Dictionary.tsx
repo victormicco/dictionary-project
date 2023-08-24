@@ -39,13 +39,13 @@ export function Dictionary() {
 
 	return (
 		<div className=" w-full flex flex-col">
-			<div className="container justify-center flex w-full">
+			<div className="container justify-start pl-32 flex w-full">
 				<input
 					type="text"
 					value={word}
 					onChange={(e) => setWord(e.target.value.replace(/[^a-zA-Z\s]/g, ""))}
 					placeholder="Search a thing..."
-					className=" w-10/12 text-start pl-10 text-black bg-gray-200 border-none outline-none rounded-lg  py-4 shadow-sm sm:text-base sm:max-w-sm"
+					className=" w-11/12 text-start pl-10 align-baseline text-black bg-gray-200 border-none outline-none rounded-lg  py-4 shadow-sm sm:text-base"
 				/>
 				<button
 					type="submit"
@@ -60,7 +60,7 @@ export function Dictionary() {
 					<AiOutlineSearch />
 				</button>
 			</div>
-			<div className="my-3 pl-48">
+			<div className="my-3 w-10/12 flex  flex-col pl-36	">
 				<div className="flex flex-row items-center text-lg font-bold font-serif">
 					<p className=" text-6xl font-serif">{word}</p>
 				</div>
